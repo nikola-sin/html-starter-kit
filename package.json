@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "gulp --development",
+    "build": "gulp build --production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikola-sin/html-starter-kit.git"
+  },
+  "author": "nikola-sin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikola-sin/html-starter-kit/issues"
+  },
+  "homepage": "https://github.com/nikola-sin/html-starter-kit#readme",
+  "devDependencies": {
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^3.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "sass": "^1.49.8",
+    "yargs": "^17.3.1"
+  }
+}
