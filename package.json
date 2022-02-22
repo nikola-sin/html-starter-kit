@@ -18,11 +18,17 @@
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
+    "gulp-csso": "^4.0.1",
     "gulp-htmlmin": "^5.0.1",
     "gulp-if": "^3.0.0",
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "sass": "^1.49.8",
     "yargs": "^17.3.1"
-  }
+  },
+  "browserslist": [
+    "last 5 version",
+    "> 1%",
+    "iOS 12"
+  ]
 }

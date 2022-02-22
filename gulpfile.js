@@ -6,6 +6,7 @@ const htmlmin = require('gulp-htmlmin');
 const sass = require('gulp-sass')(require('sass'));
 const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
+const csso = require('gulp-csso');
 const del = require('del');
 const argv = require('yargs').argv;
 
@@ -21,6 +22,19 @@ const html = () => {
   .pipe(dest('./dist/'));
 };
 
+// Sass
+const style = () => {
+  return src('./src/scss/*.scss')
+  .pipe(gulpIF(isDev, sourcemaps.init()))
+  .pipe(gulpIF(isProd, autoprefixer()))
+  .pipe(sass().on('error', sass.logError))
+  .pipe(gulpIF(isProd, csso({
+    forceMediaMerge: true
+  })))
+  .pipe(gulpIF(isDev, sourcemaps.write()))
+  .pipe(dest('./dist/'))
+};
+
 const clean = () => {
   return del('./dist/');
 };
@@ -29,10 +43,12 @@ exports.clean = clean;
 
 exports.default = series(
   clean,
-  html
+  html,
+  style
 );
 
 exports.build = series(
   clean,
-  html
+  html,
+  style
 );
