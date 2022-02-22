@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "dev": "gulp --development",
+    "dev": "gulp --development --mode=development",
     "build": "gulp build --production"
   },
   "repository": {
@@ -15,6 +15,10 @@
   },
   "homepage": "https://github.com/nikola-sin/html-starter-kit#readme",
   "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.3",
+    "browser-sync": "^2.27.7",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
@@ -24,6 +28,8 @@
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "sass": "^1.49.8",
+    "webpack": "^5.69.1",
+    "webpack-stream": "^7.0.0",
     "yargs": "^17.3.1"
   },
   "browserslist": [
