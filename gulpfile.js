@@ -64,6 +64,10 @@ const watcher = () => {
   watch('./src/*.html', series(html));
   watch('./src/scss/**/*.scss', series(style));
   watch('./src/js/**/*.js', series(script));
+  watch([
+    './src/img/**/*.{jpg,png,webp,gif,ico}',
+    './src/fonts/**/*.{woff,woff2,eot,ttf}'
+  ], series(copy));
 };
 
 // Browser Sync
