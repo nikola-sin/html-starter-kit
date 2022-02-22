@@ -7,3 +7,6 @@ dist
 
 # Lock
 *-lock.json
+
+# Mac Os files
+.DS_Store
